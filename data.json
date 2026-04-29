@@ -1,0 +1,201 @@
+{
+  "itinerari": [
+    {
+      "id": "aldo_fabrizi_attore",
+      "nome": "La Roma di Aldo Fabrizi",
+      "sottotitolo": "Un viaggio tra strade, storia e tradizioni",
+      "personaggio": {
+        "nome": "Aldo Fabrizi",
+        "anni": "1905-1990",
+        "professione": "Attore e Regista",
+        "nazionalita": "Italiana",
+        "biografia_breve": "Aldo Fabrizi è stato uno dei volti più rappresentativi del cinema italiano del Novecento. Nato e cresciuto a Roma, dove iniziò la sua carriera precisamente nel teatro di varietà, portando in scena personaggi ispirati alla vita quotidiana della capitale. Raggiunse grande notorietà con il film Roma città aperta, simbolo del neorealismo italiano, in cui interpretò un ruolo intenso e drammatico. L’attore ma anche regista è ricordato per la sua capacità di unire comicità e realismo, raccontando con autenticità il mondo popolare romano attraverso cinema, teatro e televisione.",
+        "immagine": "https://www.cucinadigusto.it/wp-content/uploads/2020/05/aldo-fabrizi-rit.jpg",
+        "opere_correlate": [
+          "Campo de' Fiori (1943)",
+          "Roma città aperta (1945)",
+          "Guardie e ladri (1951)",
+          "I tartassati (1959)"
+        ]
+      },
+      "tema": "Cinematografico",
+      "categoria": "Attore",
+      "durata_totale_ore": 9,
+      "difficolta": "facile",
+      "immagine_copertina": "https://www.italyproguide.com/wp-content/uploads/2021/07/25821142268_e60dc71bc9_o.jpeg",
+      "distanza_totale_km": 2.5,
+      "periodo_consigliato": "Primavera/Autunno",
+      "descrizione": "Questo itinerario è pensato come una passeggiata narrativa attraverso Roma, un percorso che non si limita a collegare luoghi, ma che prova a raccontare l’anima della città attraverso atmosfere, emozioni e dettagli quotidiani. Ogni tappa diventa un frammento di un racconto più ampio, in cui la città si mostra nella sua dimensione più autentica: viva, popolare e profondamente umana. Camminando tra piazze, strade e passaggi sul Tevere, Roma cambia continuamente volto, alternando momenti di energia e movimento a spazi più raccolti e sospesi. È una città che si lascia osservare nei suoi suoni, nelle sue luci e nei suoi contrasti, rivelando una bellezza fatta non solo di monumenti, ma soprattutto di vita vissuta. Il percorso segue un filo quasi cinematografico, dove ogni tappa contribuisce a costruire un’immagine diversa della città, tra ironia, memoria e poesia urbana. In questo modo, l’itinerario diventa un’esperienza che invita a guardare Roma non solo come luogo, ma come racconto continuo.",
+      "note_logistiche": "Per fare la passeggiata non è necessario l’uso di mezzi pubblici. Il percorso è interamente pedonale e facilmente percorribile.",
+      "accessibilita": "Il percorso si snoda nel centro storico pedonale, accessibile a tutti.",
+      "costo_stimato": "Gratuito",
+      "tappe": [
+        {
+          "numero": 1,
+          "poi_id": "campo_de_fiori",
+          "orario_consigliato": "09:00",
+          "momento_giornata": "mattino",
+          "durata_visita_min": 60,
+          "coordinate": [41.8955, 12.4729],
+          "nome": "Campo de' Fiori",
+          "descrizione_breve": "Piazza vivace e caotica, dove il mercato e la vita quotidiana raccontano una Roma piena di energia e ironia.",
+          "esperienza_culturale": {
+            "musica": {
+              "movimento": "Tema da 'Campo de' Fiori'",
+              "compositore": "Renzo Rossellini",
+              "descrizione_musicale": "Una melodia popolare e scanzonata, che evoca immediatamente il brusio dei mercanti, le voci dialettali e la genuinità dei personaggi interpretati da Fabrizi in questa celebre piazza."
+            },
+            "atmosfera": {
+              "luce": "forte e diretta di giorno, con contrasti netti tra ombre e sole; al tramonto diventa dorata e più morbida, quasi teatrale",
+              "suoni_ambiente": [
+                "voci del mercato",
+                "venditori che richiamano",
+                "passi sul selciato",
+                "rumore di cassette e borse",
+                "chiacchiere sovrapposte"
+              ],
+              "temperatura_stimata": "mite o calda durante il giorno, con il calore che si riflette sulle pietre",
+              "affollamento": "alto nelle ore centrali, continuo movimento di persone tra turisti e romani",
+              "emozione_target": "vitalità caotica, energia urbana, ironia spontanea della vita quotidiana",
+              "consiglio_fotografico": "<b>Momento migliore:</b> mattina presto (mercato attivo ma meno folla) oppure tardo pomeriggio.<br><b>Inquadratura:</b> scatta leggermente dal basso o in diagonale per dare profondità alla piazza e includere il caos ordinato del mercato.<br><b>Elemento chiave:</b> includi bancarelle colorate o persone in movimento.<br><b>Luce:</b> sfrutta controluce o luce radente.<br><b>Dettaglio narrativo:</b> inserisci un elemento umano (una mano che prende frutta, una conversazione, un gesto) per rendere la foto 'viva'."
+            }
+          }
+        },
+        {
+          "numero": 2,
+          "poi_id": "isola_tiberina",
+          "orario_consigliato": "12:30",
+          "momento_giornata": "primo pomeriggio",
+          "durata_visita_min": 45,
+          "coordinate": [41.8899, 12.4768],
+          "nome": "Isola Tiberina",
+          "descrizione_breve": "Luogo sospeso sul Tevere, tra silenzio, memoria e riflessi d’acqua, simbolo di pausa e intimità.",
+          "esperienza_culturale": {
+            "musica": {
+              "movimento": "Passeggiata nel passato",
+              "compositore": "Ennio Morricone",
+              "descrizione_musicale": "Archi lenti e riflessivi accompagnano questa pausa sul fiume. Una musica che sa di memoria, di tempo che scorre inesorabile come l'acqua del Tevere sotto i ponti."
+            },
+            "atmosfera": {
+              "luce": "morbida e riflessa, filtrata dall’acqua del Tevere; al tramonto diventa calda e dorata",
+              "suoni_ambiente": [
+                "scorrere del fiume",
+                "passi sul ponte",
+                "rumore lontano della città",
+                "vento leggero tra gli alberi"
+              ],
+              "temperatura_stimata": "più fresca rispetto al centro, soprattutto vicino al fiume",
+              "affollamento": "medio-basso, con momenti di quiete improvvisa",
+              "emozione_target": "sospensione, calma, memoria, intimità",
+              "consiglio_fotografico": "<b>Momento migliore:</b> tramonto o ora blu (subito dopo il tramonto).<br><b>Inquadratura:</b> dal ponte verso l’isola oppure dall’isola verso il fiume.<br><b>Elemento chiave:</b> riflessi sull’acqua + silhouette del ponte.<br><b>Luce:</b> controluce per ottenere riflessi dorati e atmosfera cinematografica.<br><b>Focus narrativo:</b> l’idea di 'isola come pausa nel flusso della città'."
+            }
+          }
+        },
+        {
+          "numero": 3,
+          "poi_id": "santa_maria_trastevere",
+          "orario_consigliato": "16:00",
+          "momento_giornata": "pomeriggio",
+          "durata_visita_min": 60,
+          "coordinate": [41.8891, 12.4703],
+          "nome": "Santa Maria in Trastevere",
+          "descrizione_breve": "Cuore autentico del quartiere, fatto di calore, luce dorata e vita condivisa tra le persone.",
+          "esperienza_culturale": {
+            "musica": {
+              "movimento": "Roma nun fa' la stupida stasera (Strumentale)",
+              "compositore": "Armando Trovajoli",
+              "descrizione_musicale": "Il tema per eccellenza del romanticismo e del calore romano. Le note calde e avvolgenti si sposano perfettamente con i mosaici dorati della basilica accarezzati dal sole pomeridiano."
+            },
+            "atmosfera": {
+              "luce": "calda e dorata, soprattutto sulle facciate della basilica",
+              "suoni_ambiente": [
+                "musica di strada",
+                "chiacchiere",
+                "bicchieri dei locali",
+                "campane leggere"
+              ],
+              "temperatura_stimata": "mite, spesso piacevole anche la sera",
+              "affollamento": "alto la sera, vivace ma conviviale",
+              "emozione_target": "calore, comunità, autenticità",
+              "consiglio_fotografico": "<b>Momento migliore:</b> sera, quando la piazza si accende di vita.<br><b>Inquadratura:</b> frontale sulla basilica oppure laterale tra tavolini e luce calda.<br><b>Elemento chiave:</b> luci dei locali + movimento delle persone.<br><b>Luce:</b> artificiale calda + luce naturale residua.<br><b>Focus narrativo:</b> 'Roma che si vive insieme'."
+            }
+          }
+        },
+        {
+          "numero": 4,
+          "poi_id": "piazza_trilussa",
+          "orario_consigliato": "17:30",
+          "momento_giornata": "tardo pomeriggio",
+          "durata_visita_min": 45,
+          "coordinate": [41.8893, 12.4696],
+          "nome": "Piazza Trilussa",
+          "descrizione_breve": "Spazio giovane e notturno, dove musica, risate e poesia urbana si incontrano sul fiume.",
+          "esperienza_culturale": {
+            "musica": {
+              "movimento": "Amorevole (Jazz Theme)",
+              "compositore": "Piero Piccioni",
+              "descrizione_musicale": "Un ritmo leggero, sincopato ed elegante. Una sonorità jazz tipica del cinema italiano anni '60 che incarna la gioventù, gli sguardi rubati e la spensieratezza della sera trasteverina."
+            },
+            "atmosfera": {
+              "luce": "serale, con riflessi sul Tevere e luci urbane morbide",
+              "suoni_ambiente": [
+                "musica e chitarre",
+                "voci di ragazzi",
+                "risate",
+                "eco del fiume"
+              ],
+              "temperatura_stimata": "piacevole la sera, leggermente umida vicino all’acqua",
+              "affollamento": "medio-alto, soprattutto giovani e gruppi",
+              "emozione_target": "leggerezza, ironia, socialità",
+              "consiglio_fotografico": "<b>Momento migliore:</b> notte o blue hour.<br><b>Inquadratura:</b> dal ponte o dalla riva verso la piazza.<br><b>Elemento chiave:</b> luci riflesse sul fiume + persone sedute.<br><b>Luce:</b> artificiale urbana riflessa sull’acqua.<br><b>Focus narrativo:</b> 'poesia urbana e vita notturna romana'."
+            }
+          }
+        },
+        {
+          "numero": 5,
+          "poi_id": "ponte_sisto",
+          "orario_consigliato": "19:00",
+          "momento_giornata": "tramonto",
+          "durata_visita_min": 30,
+          "coordinate": [41.8910, 12.4709],
+          "nome": "Ponte Sisto",
+          "descrizione_breve": "Ponte panoramico e simbolico, punto di passaggio che chiude il percorso con uno sguardo sulla città.",
+          "esperienza_culturale": {
+            "musica": {
+              "movimento": "Tema di Roma Città Aperta",
+              "compositore": "Renzo Rossellini",
+              "descrizione_musicale": "Un finale drammatico, intenso e solenne. Le note che hanno consacrato Aldo Fabrizi alla storia del cinema mondiale ci accompagnano mentre guardiamo il sole spegnersi dietro il Cupolone."
+            },
+            "atmosfera": {
+              "luce": "molto scenografica al tramonto, con cielo che si apre sulla città",
+              "suoni_ambiente": [
+                "vento leggero",
+                "passi sul ponte",
+                "rumore distante della città"
+              ],
+              "temperatura_stimata": "varia, spesso ventilato",
+              "affollamento": "medio, più calmo rispetto alle piazze",
+              "emozione_target": "nostalgia, chiusura, contemplazione",
+              "consiglio_fotografico": "<b>Momento migliore:</b> tramonto pieno.<br><b>Inquadratura:</b> centrale lungo il ponte verso il fiume o la città.<br><b>Elemento chiave:</b> prospettiva lineare + cielo colorato.<br><b>Luce:</b> golden hour per silhouette e contrasti.<br><b>Focus narrativo:</b> 'passaggio tra un lato e l’altro della città e della memoria'."
+            }
+          }
+        }
+      ],
+      "mappa_percorso": {
+        "colore_percorso": "#d4af37",
+        "stile_linea": "solid"
+      },
+      "consigli_pratici": [
+        "È consigliabile portare uno zainetto con un po’ di acqua",
+        "Abbigliamento comodo e fotocamera per catturare la luce",
+        "Lasciarsi guidare dai suoni e dal ritmo lento del fiume"
+      ],
+      "cosa_portare": [
+        "Zainetto",
+        "Acqua",
+        "Fotocamera / Smartphone",
+        "Cuffie per l'ascolto musicale"
+      ]
+    }
+  ]
+}

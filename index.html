@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Roma Cinematografica</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        /* TEMA CINEMATOGRAFICO: Scuri profondi e Oro */
+        :root {
+            --bg-dark: #121212;
+            --bg-card: #1e1e1e;
+            --bg-lighter: #2a2a2a;
+            --text-main: #f0f0f0;
+            --text-muted: #aaaaaa;
+            --gold-accent: #d4af37;
+            --gold-hover: #b5952f;
+            --red-cinema: #8b0000;
+        }
+
+        body { 
+            font-family: 'Georgia', serif; 
+            background: var(--bg-dark);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+        
+        /* === NAVIGATION BAR === */
+        #navbar {
+            background: #000000;
+            border-bottom: 2px solid var(--gold-accent);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.1);
+        }
+        
+        #navbar h1 {
+            font-size: 1.5em;
+            color: var(--gold-accent);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        #nav-buttons button {
+            background: transparent;
+            color: var(--gold-accent);
+            border: 1px solid var(--gold-accent);
+            padding: 8px 20px;
+            margin-left: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            letter-spacing: 1px;
+        }
+        
+        #nav-buttons button:hover {
+            background: var(--gold-accent);
+            color: #000;
+        }
+        
+        /* === VIEWS === */
+        .view { display: none; }
+        .view.active { display: block; }
+        
+        /* === HOME VIEW === */
+        #home-view {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        #home-view h2 {
+            text-align: center;
+            color: var(--text-main);
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+        
+        #home-view .subtitle {
+            text-align: center;
+            color: var(--gold-accent);
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+        
+        .itinerari-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .itinerario-card {
+            background: var(--bg-card);
+            border: 1px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+        
+        .itinerario-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold-accent);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+        
+        .card-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            border-bottom: 2px solid var(--gold-accent);
+        }
+        
+        .card-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0,0,0,0.8);
+            border: 1px solid var(--gold-accent);
+            color: var(--gold-accent);
+            padding: 5px 15px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .card-content { padding: 25px; }
+        
+        .card-content h3 {
+            color: var(--gold-accent);
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+        
+        .card-subtitle {
+            color: var(--text-muted);
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        .card-description {
+            color: var(--text-main);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+        
+        .card-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #333;
+        }
+        
+        .stat { text-align: center; }
+        
+        .stat-value {
+            font-size: 1.2em;
+            color: var(--gold-accent);
+            font-family: sans-serif;
+        }
+        
+        .stat-label {
+            font-size: 0.8em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+        
+        .card-button {
+            width: 100%;
+            padding: 15px;
+            background: var(--gold-accent);
+            color: #000;
+            border: none;
+            border-radius: 3px;
+            font-size: 1em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .card-button:hover { background: var(--gold-hover); }
+        
+        /* === ITINERARY VIEW === */
+        #itinerary-view {
+            display: flex;
+            height: calc(100vh - 65px);
+        }
+        
+        /* Timeline Sidebar */
+        #timeline-sidebar {
+            width: 320px;
+            background: #0a0a0a;
+            border-right: 1px solid #333;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        #timeline-title {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+            color: var(--gold-accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        
+        #progress-bar {
+            background: #222;
+            height: 4px;
+            margin-bottom: 30px;
+            border-radius: 2px;
+        }
+        
+        #progress-fill {
+            background: var(--gold-accent);
+            height: 100%;
+            width: 0%;
+            transition: width 0.5s;
+        }
+        
+        .timeline-item {
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background: var(--bg-card);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .timeline-item:hover { border-color: var(--text-muted); }
+        
+        .timeline-item.completed { border-left: 3px solid var(--text-muted); opacity: 0.7; }
+        .timeline-item.current { border-color: var(--gold-accent); box-shadow: 0 0 10px rgba(212,175,55,0.2); }
+        .timeline-item.upcoming { border-left: 3px solid #333; opacity: 0.5; }
+        
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .timeline-time { color: var(--gold-accent); font-family: sans-serif; font-size: 0.9em; }
+        .timeline-icon { font-size: 1.2em; }
+        .timeline-name { font-size: 1.1em; color: var(--text-main); }
+        
+        /* Main Content */
+        #itinerary-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #map-container { flex: 1; position: relative; }
+        #map { width: 100%; height: 100%; filter: grayscale(80%) contrast(1.2) brightness(0.8); }
+        
+        /* Dettagli Tappa */
+        #tappa-details {
+            height: 45%;
+            background: var(--bg-dark);
+            padding: 30px 40px;
+            overflow-y: auto;
+            border-top: 2px solid var(--gold-accent);
+        }
+        
+        #tappa-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #333;
+        }
+        
+        #tappa-numero {
+            font-size: 4em;
+            color: var(--gold-accent);
+            opacity: 0.8;
+            font-family: sans-serif;
+            line-height: 1;
+        }
+        
+        #tappa-nome { flex: 1; margin: 0 30px; }
+        
+        #tappa-nome h2 {
+            color: var(--text-main);
+            font-size: 2.2em;
+            font-weight: normal;
+            margin-bottom: 5px;
+        }
+        
+        .descrizione-breve {
+            color: var(--text-muted);
+            font-style: italic;
+            font-size: 1.1em;
+        }
+        
+        #tappa-orario { text-align: right; }
+        
+        #tappa-orario .time {
+            font-size: 1.8em;
+            color: var(--gold-accent);
+            font-family: sans-serif;
+        }
+        
+        #tappa-orario .moment {
+            font-size: 0.9em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Sezioni Esperienza */
+        .esperienza-section {
+            margin: 30px 0;
+            padding: 25px;
+            background: var(--bg-card);
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+        
+        .esperienza-section h3 {
+            color: var(--gold-accent);
+            margin-bottom: 20px;
+            font-weight: normal;
+            font-size: 1.4em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Audio Player Cinematico */
+        .music-player {
+            background: #000;
+            border: 1px solid var(--gold-accent);
+            padding: 25px;
+            border-radius: 5px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .music-player h4 {
+            color: var(--gold-accent);
+            margin-bottom: 10px;
+            font-size: 1.3em;
+            font-weight: normal;
+        }
+        
+        .music-player .composer {
+            color: var(--text-muted);
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        
+        .music-description {
+            font-size: 1em;
+            line-height: 1.6;
+            font-style: italic;
+            color: var(--text-main);
+        }
+        
+        /* Atmosfera Grid */
+        .atmosfera-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .atmosfera-item {
+            background: #111;
+            padding: 20px;
+            border-radius: 5px;
+            border-left: 2px solid var(--gold-accent);
+        }
+        
+        .atmosfera-item .label {
+            font-size: 0.8em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        
+        .atmosfera-item .value {
+            color: var(--text-main);
+            font-size: 1em;
+            line-height: 1.4;
+        }
+        
+        .photo-tip {
+            margin-top: 25px;
+            padding: 20px;
+            background: #0a0a0a;
+            border: 1px dashed var(--text-muted);
+            line-height: 1.7;
+        }
+        
+        /* Navigazione */
+        #tappa-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+        
+        .nav-btn {
+            padding: 12px 25px;
+            background: transparent;
+            color: var(--gold-accent);
+            border: 1px solid var(--gold-accent);
+            border-radius: 3px;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .nav-btn:hover:not(:disabled) {
+            background: var(--gold-accent);
+            color: #000;
+        }
+        
+        .nav-btn:disabled {
+            border-color: #333;
+            color: #555;
+            cursor: not-allowed;
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-dark); }
+        ::-webkit-scrollbar-thumb { background: #444; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gold-accent); }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <h1>🎞️ Roma Cinematografica</h1>
+        <div id="nav-buttons">
+            <button onclick="showView('home')">Home</button>
+            <button id="back-to-itinerary-btn" onclick="showView('itinerary')" style="display:none;">Torna al Set</button>
+        </div>
+    </div>
+    
+    <div id="home-view" class="view active">
+        <h2>Ciak, si gira!</h2>
+        <p class="subtitle">Scopri la città eterna attraverso gli occhi dei grandi attori</p>
+        <div id="itinerari-container" class="itinerari-grid"></div>
+    </div>
+    
+    <div id="itinerary-view" class="view">
+        <div id="timeline-sidebar">
+            <div id="timeline-title">Sceneggiatura</div>
+            <div id="progress-bar"><div id="progress-fill"></div></div>
+            <div id="timeline-items"></div>
+        </div>
+        
+        <div id="itinerary-content">
+            <div id="map-container"><div id="map"></div></div>
+            
+            <div id="tappa-details">
+                <div id="tappa-header">
+                    <div id="tappa-numero"></div>
+                    <div id="tappa-nome">
+                        <h2></h2>
+                        <p class="descrizione-breve"></p>
+                    </div>
+                    <div id="tappa-orario">
+                        <div class="time"></div>
+                        <div class="moment"></div>
+                    </div>
+                </div>
+                
+                <div id="tappa-content"></div>
+                
+                <div id="tappa-navigation">
+                    <button class="nav-btn prev" onclick="previousTappa()">← Scena Precedente</button>
+                    <button class="nav-btn next" onclick="nextTappa()">Scena Successiva →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        let itinerariData = null;
+        let currentItinerario = null;
+        let currentTappaIndex = 0;
+        let map = null;
+        let markers = [];
+        let routeLine = null;
+        
+        const momentIcons = {
+            'alba': '🌅', 'mattino': '🎬', 'mezzogiorno': '☀️',
+            'primo pomeriggio': '🎥', 'pomeriggio': '☕', 
+            'tardo pomeriggio': '🌇', 'tramonto': '🌆', 'sera': '🌃'
+        };
+        
+        async function init() {
+            try {
+                const response = await fetch('data.json');
+                const data = await response.json();
+                itinerariData = data.itinerari;
+                renderItinerariCards();
+            } catch (error) {
+                console.error('Errore caricamento data.json', error);
+                document.getElementById('itinerari-container').innerHTML = '<p style="text-align:center; color:white;">Errore: assicurati che il file data.json sia nella stessa cartella.</p>';
+            }
+        }
+        
+        function renderItinerariCards() {
+            const container = document.getElementById('itinerari-container');
+            container.innerHTML = '';
+            
+            itinerariData.forEach(itinerario => {
+                const card = document.createElement('div');
+                card.className = 'itinerario-card';
+                card.onclick = () => startItinerario(itinerario.id);
+                
+                card.innerHTML = `
+                    <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.9)), url('${itinerario.immagine_copertina}')">
+                        <div class="card-badge">${itinerario.tema}</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>${itinerario.nome}</h3>
+                        <p class="card-subtitle">${itinerario.sottotitolo}</p>
+                        <p class="card-description">${itinerario.descrizione.substring(0, 150)}...</p>
+                        <div class="card-stats">
+                            <div class="stat">
+                                <div class="stat-value">${itinerario.durata_totale_ore}h</div>
+                                <div class="stat-label">Durata</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">${itinerario.distanza_totale_km}km</div>
+                                <div class="stat-label">Distanza</div>
+                            </div>
+                        </div>
+                        <button class="card-button" style="margin-top:20px;">Azione! 🎬</button>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+        
+        function startItinerario(id) {
+            currentItinerario = itinerariData.find(it => it.id === id);
+            currentTappaIndex = 0;
+            showView('itinerary');
+            initMap();
+            renderTimeline();
+            loadTappa(0);
+        }
+        
+        function showView(viewName) {
+            document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+            document.getElementById(`${viewName}-view`).classList.add('active');
+            document.getElementById('back-to-itinerary-btn').style.display = viewName === 'itinerary' ? 'inline-block' : 'none';
+            if(viewName === 'itinerary' && map) map.invalidateSize();
+        }
+        
+        function initMap() {
+            if (map) map.remove();
+            map = L.map('map').setView([41.9028, 12.4964], 13);
+            
+            // Mappa Dark (CartoDB Dark Matter)
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
+            }).addTo(map);
+            
+            drawRoute();
+            addMarkers();
+        }
+        
+        function drawRoute() {
+            const styleLinea = currentItinerario.mappa_percorso?.stile_linea === 'dashed' ? '10, 10' : '';
+            const color = currentItinerario.mappa_percorso?.colore_percorso || '#d4af37';
+            
+            const coords = currentItinerario.tappe.map(t => t.coordinate);
+            routeLine = L.polyline(coords, {
+                color: color, weight: 5, opacity: 0.8, dashArray: styleLinea
+            }).addTo(map);
+            map.fitBounds(routeLine.getBounds(), { padding: [50, 50] });
+        }
+        
+        function addMarkers() {
+            currentItinerario.tappe.forEach((t, i) => {
+                const marker = L.circleMarker(t.coordinate, {
+                    radius: 8, fillColor: '#d4af37', color: '#000', weight: 2, fillOpacity: 1
+                }).addTo(map);
+                marker.on('click', () => loadTappa(i));
+                markers.push(marker);
+            });
+        }
+        
+        function renderTimeline() {
+            const container = document.getElementById('timeline-items');
+            container.innerHTML = '';
+            
+            currentItinerario.tappe.forEach((tappa, index) => {
+                const item = document.createElement('div');
+                item.className = 'timeline-item';
+                if (index < currentTappaIndex) item.classList.add('completed');
+                else if (index === currentTappaIndex) item.classList.add('current');
+                else item.classList.add('upcoming');
+                
+                item.onclick = () => loadTappa(index);
+                item.innerHTML = `
+                    <div class="timeline-header">
+                        <span class="timeline-time">${tappa.orario_consigliato}</span>
+                        <span class="timeline-icon">${momentIcons[tappa.momento_giornata] || '📍'}</span>
+                    </div>
+                    <div class="timeline-name">${tappa.nome}</div>
+                `;
+                container.appendChild(item);
+            });
+            document.getElementById('progress-fill').style.width = `${((currentTappaIndex + 1) / currentItinerario.tappe.length) * 100}%`;
+        }
+        
+        function loadTappa(index) {
+            currentTappaIndex = index;
+            const tappa = currentItinerario.tappe[index];
+            
+            document.getElementById('tappa-numero').textContent = `0${tappa.numero}`;
+            document.querySelector('#tappa-nome h2').textContent = tappa.nome;
+            document.querySelector('#tappa-nome .descrizione-breve').textContent = tappa.descrizione_breve;
+            document.querySelector('#tappa-orario .time').textContent = tappa.orario_consigliato;
+            document.querySelector('#tappa-orario .moment').textContent = tappa.momento_giornata;
+            
+            renderContent(tappa);
+            renderTimeline();
+            map.setView(tappa.coordinate, 16, { animate: true });
+            
+            document.querySelector('.nav-btn.prev').disabled = index === 0;
+            document.querySelector('.nav-btn.next').disabled = index === currentItinerario.tappe.length - 1;
+        }
+        
+        function renderContent(tappa) {
+            const container = document.getElementById('tappa-content');
+            container.innerHTML = '';
+            
+            if (tappa.esperienza_culturale) {
+                const exp = tappa.esperienza_culturale;
+                
+                // Audio
+                if (exp.musica) {
+                    container.innerHTML += `
+                        <div class="music-player">
+                            <h4>🎵 ${exp.musica.movimento}</h4>
+                            <div class="composer">di ${exp.musica.compositore}</div>
+                            <div class="music-description">"${exp.musica.descrizione_musicale}"</div>
+                        </div>
+                    `;
+                }
+                
+                // Atmosfera
+                if (exp.atmosfera) {
+                    let atmHtml = `<div class="esperienza-section"><h3>✨ Atmosfera della Scena</h3><div class="atmosfera-grid">`;
+                    if(exp.atmosfera.luce) atmHtml += `<div class="atmosfera-item"><div class="label">Luce</div><div class="value">${exp.atmosfera.luce}</div></div>`;
+                    if(exp.atmosfera.emozione_target) atmHtml += `<div class="atmosfera-item"><div class="label">Emozione</div><div class="value">${exp.atmosfera.emozione_target}</div></div>`;
+                    if(exp.atmosfera.suoni_ambiente) atmHtml += `<div class="atmosfera-item"><div class="label">Suoni</div><div class="value">${exp.atmosfera.suoni_ambiente.join(', ')}</div></div>`;
+                    atmHtml += `</div>`;
+                    
+                    if(exp.atmosfera.consiglio_fotografico) {
+                        atmHtml += `<div class="photo-tip"><h4>📸 Direzione della Fotografia</h4><p style="margin-top:10px;">${exp.atmosfera.consiglio_fotografico}</p></div>`;
+                    }
+                    atmHtml += `</div>`;
+                    container.innerHTML += atmHtml;
+                }
+            }
+        }
+        
+        function previousTappa() { if (currentTappaIndex > 0) loadTappa(currentTappaIndex - 1); }
+        function nextTappa() { if (currentTappaIndex < currentItinerario.tappe.length - 1) loadTappa(currentTappaIndex + 1); }
+        
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
