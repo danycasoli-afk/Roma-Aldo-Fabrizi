@@ -1,0 +1,382 @@
+{
+  "itinerari": [
+    {
+      "id": "aldo_fabrizi",
+      "nome": "La Roma di Aldo Fabrizi",
+      "sottotitolo": "Un viaggio tra strade, storia e tradizioni",
+      "personaggio": {
+        "nome": "Aldo Fabrizi",
+        "anni": "1905-1990",
+        "professione": "Attore",
+        "nazionalita": "Italiana",
+        "biografia_breve": "Celebre attore, regista e comico romano, simbolo del cinema italiano del dopoguerra. Ricordato sopreattutto per il film Roma citta aperta e per aver raccontato con ironia e autenticità la vita popolare di Roma.",
+        "immagine": "https://cdn.artphotolimited.com/images/5e43d752bd40b8182cd48126/1000x1000/aldo-fabrizi.jpg",
+        "opere_correlate": [
+          "Roma città aperta (1945)",
+          "I tartassati (1959)",
+          "Guardie e Ladri (1951)",
+          "Campo de' Fiori (1943)"
+        ]
+      },
+      "tema": "Cinema Neorealistico - Tradizione popolare Romana",
+      "categoria": "Attori e Registi",
+      "durata_totale_ore": 9,
+      "difficolta": "facile",
+      "immagine_copertina": "https://www.italyproguide.com/app/uploads/2021/07/25821142268_e60dc71bc9_o.jpeg",
+      "distanza_totale_km": 2.5,
+      "periodo_consigliato": "Primavera/Autunno (temperature miti)",
+      "stagione_migliore": ["marzo", "aprile", "maggio", "settembre", "ottobre"],
+      "descrizione": "Rivivi lo spirito autentico della Capitale attraverso i luoghi e i volti che hanno reso eterno il cinema di Aldo Fabrizi. Ogni tappa è una scena di un film a cielo aperto, un viaggio tra i vicoli e le piazze dove la romanità si fa storia, risata e poesia popolare. Un'esperienza che unisce il grande schermo, la tradizione e il cuore pulsante della città.",
+      "note_logistiche": "Il percorso è adatto a tutti, con soste frequenti per godere appieno ogni tappa e prevede una sosta nel risrorante storico Sora lella, nonchè sorella di Aldo Fabrizi situato sull'Isola Tiberina.",
+      "accessibilita": "Tutte le tappe sono accessibili comodamente camminando, con possibilità di soste per gustare un caffè o un gelato. Il percorso è adatto a anziani e famiglie anche accompagnate da animali domestici",
+      "costo_stimato": "Gratuito ",
+      "tappe": [
+        {
+          "numero": 1,
+          "poi_id": "campo_de_fiori",
+          "orario_consigliato": "10:00",
+          "momento_giornata": "mattina",
+          "durata_visita_min": 150,
+          "coordinate": [41.8959, 12.4722],
+          "nome": "Campo de' Fiori ",
+          "descrizione_breve": "Il cuore pulsante della Roma popolare: tra il vociare del mercato storico e l'ironia autentica delle sue piazze.",
+          "indicazioni_arrivo": "Punto di partenza nel cuore del centro storico, facilmente raggiungibile a piedi da Piazza Navona o con i mezzi pubblici scendendo alla fermata 'Corso Vittorio Emanuele/Navona",
+          "esperienza_culturale": {
+            "musica": {
+              "movimento": "I. Canzone d'autore Romana",
+              "brano_completo": "Campo de' Fiori - Antonello Venditti",
+              "compositore": "Antonello Venditti",
+              "durata_sec": 358,
+              "tonalita": "la minore",
+              "organico": "Pianoforte, voce e orchestra",
+              "anno_composizione": 1974,
+              "descrizione_musicale": "Un omaggio struggente alla piazza e alla sua storia. Il pianoforte di Venditti accompagna un testo che parla di mercati, di sanpietrini e di una Roma che cambia ma resta fedele a se stessa. La melodia malinconica richiama la stessa umanità profonda che Aldo Fabrizi metteva nei suoi personaggi più celebri.",
+              "spotify_url": "https://open.spotify.com/intl-it/track/4VAPH3VhkJCL9qQOYOyLmw?si=98e520204baf491d",
+              "youtube_url": "https://youtu.be/P7bklx5vpEo?si=A_TLt_WdNz7vZwk8",
+              "note_ascolto": "Ascoltare il brano mentre si camminaAscolta il brano mentre cammini tra i banchi del mercato, prestando attenzione al crescendo orchestrale che sottolinea la maestosità della statua di Giordano Bruno. tra i banchi del mercato, prestando attenzione al crescendo orchestrale che sottolinea la maestosità della statua di Giordano Bruno."
+            },
+            "letteratura": {
+              "citazione": "Magna e bevi, che la vita è un lampo: goditi 'sta piazza finché c'è er sole, che a diventà marmo come Giordano Bruno se fa sempre in tempo.",
+              "autore": "Aldo Fabrizi",
+              "opera": "Aforismi e poesie Romanesche",
+              "anno": 1889,
+              "contesto": "Una riflessione tipica della filosofia di Fabrizi: l'invito a godersi i piaceri della vita e la bellezza di Roma con la tipica ironia disincantata dei romani veraci."
+            },
+            "atmosfera": {
+              "momento": "mattina",
+              "luce": "Brillante e calda, che illumina i banchi del mercato creando contrasti netti tra l'oro del sole e le ombre scure dei vicoli circostanti.",
+              "suoni_ambiente": [
+                "Vociare tipico dei mercanti romani",
+                "Rumori dei passi e carretti sui sampietrini",
+                "sottofondo di musica popolare suonata da artisti di strada"
+              ],
+              "temperatura_stimata": "18-22°C",
+              "affollamento": "alto (pieno fermento del mercato rionale)",
+              "consiglio_fotografico": "Cattura l'anima del mercatp: usa un'apertira ampia per isolare i dettagli della merce o i volti espressivi dei venditori, cercando il contrasto tra la statuta bronzea di Giordano Bruno e i colori vivaci della frutta",
+              "emozione_target": "Vitalità, nostalgia, schietta romanità"
+            },
+            "arte_visiva": {
+              "stile_architettonico": "Popolare/Medievale",
+              "monumento centrale": "Statua di Giordano Bruno",
+              "architetti": ["Ettore Ferrari (scultore)"],
+              "anno_costruzione": "1889",
+              "committente": "Papa Giulio III",
+              "descrizione": "L'unica piazza monumentale di Roma senza una chiesa, dominata dalla statua bronzea del filosolo eretico Giordano Bruno, che fu arso vivo proprio in questo luogo nel 1600. Il mercato rionale che si tiene ogni mattina è una tradizione secolare che anima la piazza con colori vivaci e profumi intensi, creando un'atmosfera unica che fonde storia, cultura popolare e quotidinatità romana."
+            }
+          },
+          "storia": "Campo de'Fiori è da secoli il cuore del commercio popolare romano. Nel 1943 divenne il set naturale dell'omonimo film con Aldo Fabrizi e Anna Magnani, consacrando la piazza come simbolo del Neorealismo e della romanità verace nel mondo.",
+          "curiosita": "Swi dice che Aldo Fabrizi, per prepararsi al ruolo del pescivendolo Peppino, passò intere mattinate a osservare i veri mercanti della piazza, imparando da loro i modi di fare e le grida per attirare i clienti.",
+          "metadata": {
+            "accessibilita": "Gratuito, sempre accessibile (area pedonale)",
+            "orari_mercato": "Lun-Sab 7:00-14:00 (domeica chiuso)",
+            "servizi": ["fontanella (nasone), numerosi bar e forni storici, mercato rionale."]
+          }
+        },
+        {
+          "numero": 2,
+          "poi_id": "isola_tiberina",
+          "orario_consigliato": "12:30",
+          "momento_giornata": "primo pomeriggio",
+          "durata_visita_min": 210,
+          "coordinate": [41.8899, 12.4768],
+          "nome": "Isola Tiberina",
+          "descrizione_breve": "L'Isola Tiberina emerge fiera come una nave di pietra nel cuore del Tevere, simbolo eterno di una Roma che sfida il tempo tra storia, leggenda e l'abbraccio delle sue acque.",
+          "indicazioni_arrivo": "Da Campo de' Fiori: una piacevole passeggiata di circa 1 km (15 minuti) che attraversa il cuore del Ghetto Storico. Da Campo de' Fiori procediamo verso Piazza Cairoli, percorriamo Via Arenula e attraversiamo il Tevere sul secolare Ponte Fabricio",
+          "tempo_spostamento_da_tappa_precedente": {
+            "a_piedi": "15 min",
+            "distanza_km": 1.0
+          },
+          "esperienza_culturale": {
+            "musica": {
+              "movimento": "II. Tema principale (Deborah's Theme)",
+              "brano_completo": "C'era una volta in America - Ennio Morricone",
+              "compositore": "Ennio Morricone",
+              "durata_sec": 260,
+              "tonalita": "Mi bemolle maggiore",
+              "descrizione_musicale": "Una melodia che sospende il tempo, evocando il ricordo e la perdita. Il suono etereo del flauto di Pan si infrange contro le pietre millenarie dell'Isola, proprio come le acque del Tevere, creando un ponte emotivo tra la Roma del grande cinema e il mito americano.",
+              "strumenti_protagonisti": ["tromba, flauto di Pan, archi in pianissimo"],
+              "carattere": "Sognante, nostalgivo, evocativo",
+              "spotify_url": "https://open.spotify.com/intl-it/track/5SD6sFZsMrEsOOfmNxYWCJ?si=b0353729711f498d",
+              "youtube_url": "https://youtu.be/-CP_uwRtj0g?si=D5Q3ilt3_FXPT_TG",
+              "note_ascolto": "Inizia l'ascolto appena metti piede sul Ponte Fabricio. Lascia che il tema degli archi cresca mentre raggiungi il centro dell'isola, guardando verso Ponte Cestio."
+            },
+            "letteratura": {
+              "citazione": "Er Tevere non è solo un fiume, è la strada principale de Roma, quella che non c'ha semafori ma te porta dritto ar core della città.",
+              "autore": "Aldo fabrizi",
+              "opera": "Pensieri di un romano",
+              "anno": 1975,
+              "contesto": "Fabrizi ha sempre visto il fiume come l'anima viva di Roma, un luogo di lavoro e di ricordi legati alle sue prime interpretazioni cinematografiche."
+            },
+            "atmosfera": {
+              "momento": "primo pomeriggio",
+              "luce": "calda e riflessa dall'accqua, che mette in risalto il travertino dei ponti e le sfumature del verde sulle sponde",
+              "suoni_ambiente": [
+                "scroscio costante delle cascate del tevere",
+                "garrito dei gabbiani",
+                "eco dei passi sui ponti millenari"
+              ],
+              "temperatura_stimata": "20-23°C",
+              "affollamento": "moderato (passeggiata rilassata)",
+              "consiglio_fotografico": "Sfrutta i riflessi dorati del fiume e le ombre profonde sotto le arcate dei ponti.",
+              "emozione_target": "Pace, meraviglia, connessione con la storia viva di Roma"
+            },
+            "arte_visiva": {
+              "stile_architettonico": "Romanico/Medievale",
+              "scultore": "Maestri Comacini (campanile), vari artisti per le fontane",
+              "anno_costruzione": "X secolo (campanile), varie epoche per le fontane",
+              "committente": "Popolo Romano",
+              "materiali": "Pietra, travertino, bronzo",
+              "altezza_m": "30m (campanile), 5-10m (fontane)",
+              "descrizione": "Un'isola a forma di nave nel cuore di Roma. Il campanile romanico e le murature in travertino dei ponti Fabricio e Cestio creano un set naturale unico, dove il tempo sembra essersi fermato."
+            }
+          },
+          "storia": "Anticamente sede del tempio di Esculapio, l'isola è da sempre legata alla cura e alla protezione. Per il cinema, è stata il simbolo della Roma di 'mezzo', un passaggio obbligato tra il Ghetto e Trastevere per i vetturini interpretati da Fabrizi.",
+          "curiosita": "L'Isola Tiberina è l'unico luogo di Roma dove, durante le riprese, Aldo Fabrizi chiedeva spesso di fermarsi a mangiare in una storica trattoria dell'isola, sostenendo che 'l'aria del fiume mette fame vera",
+          "metadata": {
+            "accessibilita": "gratuito, sempre accessibile",
+            "servizi": ["ospedale Fatebenefratelli, ristoranti, cinema all'aperto (estate)"]
+          }
+        },
+        {
+          "numero": 3,
+          "poi_id": "piazza_santa_maria_in_trastevere",
+          "orario_consigliato": "16:00",
+          "momento_giornata": "pomeriggio",
+          "durata_visita_min": 120,
+          "coordinate": [41.8892, 12.4691],
+          "nome": "Piazza Santa Maria in Trastevere",
+          "descrizione_breve": "I mosaici dorati della Basilica risplendono sulla piazza come un tesoro antico, cuore pulsante di una Trastevere verace che conserva intatto lo spirito popolare caro ad Aldo Fabrizi",
+          "indicazioni_arrivo": "Da Isola Tiberina: un cammino di circa 750 metri (11 minuti). Lasciamo l'isola attraversando il Ponte Cestio per entrare nel cuore di Trastevere. Percorriamo tutta la storica Via della Lungaretta, un rettilineo ricco di botteghe e vita popolare, fino a sbucare nella maestosa piazza della Basilica.",
+          "tempo_spostamento_da_tappa_precedente": {
+            "a_piedi": "11 min",
+            "distanza_km": 0.75
+          },
+          "esperienza_culturale": {
+            "musica": {
+              "movimento": "III. Lamento Romano",
+              "brano_completo": "Sinno' me moro - Gabriella Ferri",
+              "compositore": "Rustichelli/ Germi/ gabriella Ferri",
+              "durata_sec": 240,
+              "tonalita": "La minore",
+              "descrizione_musicale": "Un canto d'amore disperato e profondo che risuona tra le mura calde di Trastevere. La voce graffiante della Ferri trasforma questa melodia in un pianto universale, richiamando l'umanità dei personaggi popolari interpretati da Aldo Fabrizi, capaci di grandi risate ma anche di malinconie struggenti.",
+              "citazioni_famose": "Usato in film e pubblicità come simbolo di Roma",
+              "spotify_url": "https://open.spotify.com/intl-it/track/6FQrB7YaDQf9HmaUBw9Zq2?si=bd068f3c3dfd4477",
+              "youtube_url": "https://youtu.be/OXE2lnlWzG8?si=YEJcXKB9BfkkH8ma",
+              "note_ascolto": "Fermati al centro della piazza, vicino alla fontana. Lascia che la voce di Gabriella riempia lo spazio tra te e i mosaici della Basilica mentre il sole cala dietro i tetti di Trastevere."
+            },
+            "letteratura": {
+              "citazione": "Trastevere è 'n'abbazia a cielo aperto: dove se prega col core e se magna con la pancia, e alla fine te senti sempre un po' più vicino al Padreterno.",
+              "autore": "Aldo fabrizi",
+              "opera": "Er core de Roma",
+              "anno": 1960,
+              "contesto": "Fellini spiega perché ha scelto Trevi per l'iconica scena con Anita Ekberg."
+            },
+            "cinema": {
+              "film": "La Dolce Vita",
+              "regista": "Federico Fellini",
+              "anno": 1968,
+              "scena": "Anita Ekberg nella fontana",
+              "descrizione": "Fabrizi considerava Trastevere la casa di ogni romano, un luogo dove la sacralità della chiesa e la profanità della tavola convivono in armonia."
+            },
+            "atmosfera": {
+              "momento": "pomeriggio",
+              "luce": "Luce ambrata che incendia i mosaici dorati della facciata della Basilica, creando un contrasto vibrante con il colore ocra dei palazzi.",
+              "suoni_ambiente": [
+                "chiacchiere animate dai tavolini dei bar",
+                "voci di centinaia di turisti",
+                "musica di strada (artisti)",
+                "rintocchi delle campane della Basilica"
+              ],
+              "temperatura_stimata": "22-26°C (caldo pieno)",
+              "affollamento": "molto alto (picco turistico)",
+              "consiglio_fotografico": "Usa una focale corta per catturare l'intera piazza includendo la fontana e i riflessi d'oro dei mosaici medievali.",
+              "emozione_target": "Appartenenza, allegria, calore umano"
+            },
+            "arte_visiva": {
+              "stile_architettonico": "Romanico e Barocco con mosaici medievali",
+              "monumento_centrale": "Basilica di Santa Maria in Trastevere",
+              "architetto": "Pietro Cavallini (mosaici), Carlo Fontana (facciata barocca)",
+              "anno_costruzione": "XII secolo (mosaici), 1702 (facciata)",
+              "committente": "Papa Innocenzo II (mosaici), Papa Clemente XI (facciata)",
+              "descrizione": "Una delle chiese più antiche di Roma, celebre per i suoi mosaici che brillano di luce propria. La piazza è definita dalla fontana ottagonale, punto di ritrovo storico per generazioni di romani."
+            }
+          },
+          "storia": "Fondata da San Callisto nel III secolo, è stata il primo luogo di culto cristiano aperto ufficialmente al pubblico. Per il cinema, Trastevere rappresenta il palcoscenico naturale della romanità, teatro di innumerevoli interpretazioni di Fabrizi e dei grandi attori del dopoguerra.",
+          "curiosita": "Si racconta che Aldo Fabrizi avesse un tavolo fisso in una delle trattorie affacciate sulla piazza, dove amava discutere di sceneggiature davanti a un piatto di amatriciana, sostenendo che 'le idee migliori vengono col sugo buono'.",
+          "metadata": {
+            "accessibilita": "Gratuito, Basilica accessibile",
+            "orari_standard": "rispettare orari messe",
+            "servizi": ["numerose trattorie storiche", "fontanella", "punti informazioni"],
+            "warning": "Attenzione ai borseggiatori in zona affollata"
+          }
+        },
+        {
+          "numero": 4,
+          "poi_id": "piazza_trilussa",
+          "orario_consigliato": "18:00",
+          "momento_giornata": "tardo pomeriggio",
+          "durata_visita_min": 60,
+          "coordinate": [41.8918, 12.4703],
+          "nome": "Piazza Trilussa",
+          "descrizione_breve": "Un palcoscenico di pietra affacciato sul Tevere, dove la scalinata diventa un teatro a cielo aperto dedicato al poeta Trilussa e alla satira romana, tanto amata dallo spirito ironico di Aldo Fabrizi",
+          "indicazioni_arrivo": "Da Piazza Santa Maria in trastevere: una breve passeggiata di circa 500 metri (7 minuti) che segue il lungotevere fino a raggoingere la scalinata di Piazza Trilussa. ",
+          "tempo_spostamento_da_tappa_precedente": {
+            "a_piedi": "7 min",
+            "distanza_km": 0.5
+          },
+          "esperienza_culturale": {
+            "musica": {
+              "movimento": "IV. intermezzo ironico",
+              "brano_completo": "Tanto pe cantà - Nino Manfredi",
+              "compositore": "Nino Manfredi (1932)",
+              "durata_sec": 165,
+              "tonalita": "Sol maggiore",
+              "descrizione_musicale": "Un inno alla spensieratezza e all'ironia tipica dei romani. Il ritmo scanzonato e il testo, che celebra il canto come rimedio a ogni male, rispecchiano la filosofia di vita di Aldo Fabrizi: affrontare le difficoltà con una risata e un buon bicchiere di vino.",
+              "carattere": "Allegro, ironico, spensierato",
+              "spotify_url": "https://open.spotify.com/intl-it/track/3ZqL7rtfHLxWk7PQnZv7hH?si=f8262dda0bab40e3",
+              "youtube_url": "https://youtu.be/2IjVfTWuauo?si=ih4bJkVOrYIdPiAA",
+              "note_ascolto": "Siediti sulla scalinata della fontana e osserva il movimento della piazza. Lascia che il ritmo della canzone ti faccia sentire parte di questa grande recita a cielo aperto che è Roma."
+            },
+            "letteratura": {
+              "citazione": "Trilussa diceva che er core de Roma è de pietra, ma io dico che è de pane: se lo sai tajà bene, ci sfami tutto er monno con l'allegria.",
+              "autore": "Aldo fabrizi",
+              "opera": "Cronache de na' volta",
+              "anno": 1972,
+              "contesto": "Un omaggio di Fabrizi al grande poeta dialettale: entrambi condividevano la capacità di raccontare i vizi e le virtù dei romani con una saggezza semplice ma profonda."
+            },
+            "atmosfera": {
+              "momento": "sera",
+              "luce": "Luce calda dei lampioni che si riflette sui gradini della scalinata e sulla facciata della fontana dell'Acqua Paola.",
+              "suoni_ambiente": [
+                "cbrindisi e risate",
+                "chitarre di artisti di strada",
+                "rumore dell'acqua che scroscia nella fontana di sisto V"
+              ],
+              "temperatura_stimata": "19-21°C (temperatura ideale)",
+              "affollamento": "molto alto (punto di ritrovo della movida)",
+              "consiglio_fotografico": "Cattura la piazza dal basso verso l'alto per includere la statua di Trilussa e la monumentale fontana sullo sfondo, giocando con le luci calde della sera.",
+              "emozione_target": "Spensieratezza, convivialità, spirito critico"
+            },
+            "arte_visiva": {
+              "monumento_centrale": "Fontana dell'Acqua Paola a Ponte Sisto",
+              "architetto": "Giovanni Vasanzio e Giovanni Fontana",
+              "anno_costruzione": "1613",
+              "descrizione": "Una splendida mostra d'acqua che chiude la prospettiva di via Giulia. La piazza è nobilitata dal monumento bronzeo al poeta Trilussa, raffigurato in una posa pensierosa mentre declama i suoi versi alla città."
+            }
+          },
+          "storia": "Anticamente questo spazio era l'approdo per i traghetti che attraversavano il fiume prima della costruzione dei ponti moderni. Oggi la piazza è il confine simbolico tra la Trastevere monumentale e quella dei vicoli, dedicata al poeta satirico per eccellenza.",
+          "curiosita": "Si dice che Aldo Fabrizi conoscesse a memoria centinaia di sonetti di Trilussa e che spesso, durante le riprese nei dintorni di Ponte Sisto, si fermasse sotto la statua per recitarne uno alla troupe, sostenendo che 'Trilussa è il sale di Roma'.",
+          "metadata": {
+            "accessibilita": "Area pedonale gratuita, sempre aperta",
+            "orario_consigliato": "Dalle 18:00 in poi per vivere l'anima vera della piazza",
+            "servizi": ["scalinata per sosta", "numerosi locali e wine bar", "fontana pubblica"]
+          }
+        },
+        {
+          "numero": 5,
+          "poi_id": "ponte_sisto",
+          "orario_consigliato": "19:00",
+          "momento_giornata": "tramonto",
+          "durata_visita_min": 40,
+          "coordinate": [41.8923, 12.4707],
+          "nome": "Ponte Sisto",
+          "descrizione_breve": "Un ponte sospeso tra storia e leggenda che unisce le due rive del cuore di Roma, offrendo lo scorcio più romantico sul Tevere e su San Pietro, proprio come in una scena dei grandi film di Aldo Fabrizi.",
+          "indicazioni_arrivo": "Da Piazza Trilussa: una brevissima passeggiata di circa 100 metri (1 minuto) che segue il lungotevere fino a raggiungere il Ponte Sisto.",
+          "tempo_spostamento_da_tappa_precedente": {
+            "a_piedi": "1 min",
+            "distanza_km": 0.09
+          },
+          "esperienza_culturale": {
+            "musica": {
+              "movimento": "V. Gran finale nottturno",
+              "brano_completo": "Roma nun fa la stupida stasera - Lando Fiorini",
+              "compositore": "Lando fiorini (1932)",
+              "durata_sec": 195,
+              "tonalita": "Fa maggiore",
+              "descrizione_musicale": "La ninna nanna definitiva di Roma. Gli archi avvolgenti e la melodia sognante sembrano cullare il fiume sottostante. È l'invito della città a lasciarsi andare alla bellezza, una richiesta che Aldo Fabrizi, nel ruolo di Mastro Titta nel Rugantino, interpretava con una tenerezza infinita.",
+              "carattere": "Dolce, nostalgico, avvolgente",
+              "spotify_url": "https://open.spotify.com/intl-it/track/71zhmbFDlvzMHyIUbVwp3D?si=c31193bb826148a0",
+              "youtube_url": "https://youtu.be/S_EucEJDTHs?si=wjUi4vRZ62eyXpQv",
+              "note_ascolto": "Fermati esattamente a metà del ponte, guarda verso la Cupola di San Pietro e lascia che la musica ti avvolga mentre le luci della città iniziano a brillare."
+            },
+            "letteratura": {
+              "citazione": "uanno stai sopra a 'sto ponte, te pare che Roma te voglia abbraccià. E allora capisci che, pure se sei solo, non sarai mai abbandonato.",
+              "autore": "Aldo fabrizi",
+              "opera": "Interviste Romane",
+              "anno": "1980",
+              "contesto": "Un pensiero di Fabrizi sulla magia dei ponti romani, visti come braccia tese tra le due rive della città, capaci di regalare un senso di pace profonda."
+            },
+            "atmosfera": {
+              "momento": "tramonto",
+              "luce": "Un'esplosione d'oro e arancio che incendia il cielo dietro il Cupolone, mentre il Tevere si tinge di sfumature metalliche e i mattoni del ponte diventano di un rosso profondo.",
+              "suoni_ambiente": [
+                "Vento leggero che sibila tra le arcate",
+                "Il brusio della città che si prepara alla notte",
+                "Rintocchi delle campane di San pietro in lontananza"
+              ],
+              "temperatura_stimata": "18-21°C (temperatura ideale)",
+              "affollamento": "Variabile (meta romantica e di passaggio)",
+              "consiglio_fotografico": "Scatta verso il Cupolone: la prospettiva dal centro di Ponte Sisto è l'immagine simbolo della Roma cinematografica.",
+              "emozione_target": "Romanticismo, incanto, gratitudine"
+            },
+            "arte_visiva": {
+              "stile_prevalente": "Rinascimentale",
+              "monumento_centrale": "Struttura a quattro arcate con 'occhio di bue' centrale",
+              "architetti": "Baccio Pontelli",
+              "anno_inaugurazione": "1475",
+              "descrizione": "Costruito per il Giubileo del 1475, è un capolavoro di ingegneria rinascimentale. Il grande foro centrale serve a scaricare la pressione del fiume durante le piene, ma esteticamente rende il ponte leggero e iconico."
+            }
+          },
+          "storia": "Voluto da Papa Sisto IV sulle rovine di un antico ponte romano, per secoli è stato l'unico collegamento tra il centro e Trastevere. È il set preferito dai registi di tutto il mondo per rappresentare l'anima romantica e notturna della capitale.",
+          "curiosita": "Durante le riprese del film 'Rugantino', Aldo Fabrizi amava camminare su questo ponte durante le pause notturne. Diceva spesso che l'unico modo per capire Roma era guardarla 'in silenzio, sopra ar fiume, senza fretta'.",
+          "metadata": {
+            "accessibilita": "Area pedonale, accessibile a tutti",
+            "orario_consigliato": "Dalle 19:00 in poi per la massima suggestione",
+            "servizi": ["illuminazione monumentale", "panchina naturale sui parapetti, vista panoramica"]
+          }
+        }
+          
+       ],
+      "mappa_percorso": {
+        "polyline_encoded": "stringa_coordinate",
+        "colore_percorso": "#e2725b",
+        "stile_linea": "solid"
+      },
+      "consigli_pratici": [
+        "Portare bottiglia d'acqua riutilizzabile (fontanelle romane lungo il percorso)",
+        "Scarpe comode obbligatorie (2.5 km a piedi)",
+        "Cuffie di buona qualità per ascoltare la musica",
+        "Considerare pausa pranzo nel ristorante storico Sora lella sull'isola Tiberina"
+      ],
+      "migliore_periodo_anno": "Marzo-Maggio o Settembre-Ottobre (luce migliore, temperature miti)",
+      "sconsigliato": ["Piena estate (troppo caldo a mezzogiorno)"],
+      "cosa_portare": [
+        "Smartphone con app mappe",
+        "Cuffie/auricolari",
+        "Bottiglia acqua",
+        "Cappello",
+        "Batteria portatile"
+      ]
+    }
+  ]
+}
